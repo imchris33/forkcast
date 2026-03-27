@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   const { password } = await request.json();
 
-  if (password === process.env.SITE_PASSWORD) {
+  if (password === process.env.NEXT_PUBLIC_AUTH_PASSWORD) {
     const response = NextResponse.json({ success: true });
     response.cookies.set('forkcast_auth', 'authenticated', {
       httpOnly: true,

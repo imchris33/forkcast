@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 // Client-side (browser)
 export const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLIC_KEY!
 );
 
 // Server-side (API routes) — use service role for full access
